@@ -29,6 +29,6 @@ VOLUME /opt/eosio/nodeos
 ENV DATA_DIR /opt/nodeos/data
 ENV DATA_CONFIG /opt/nodeos/config
 
-COPY ./scripts/nodeosd.sh /opt/eosio/scripts
-RUN chmod +x /opt/eosio/scripts/nodeosd.sh
+COPY ./scripts/nodeosd.sh /opt/eosio/nodeos/scripts
+RUN chmod +x /opt/eosio/nodeos/scripts/nodeosd.sh
 

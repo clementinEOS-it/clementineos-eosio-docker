@@ -17,7 +17,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y ./eosio_2.0.7-1-ubuntu-18.04_a
 # create directory 
 WORKDIR /opt/eosio
 WORKDIR /opt/eosio/nodeos
-WORKDIR /opt/eosio/scripts
+WORKDIR /opt/eosio/nodeos/data
+WORKDIR /opt/eosio/nodeos/scripts
 
 ENV EOSIO_ROOT=/opt/eosio
 

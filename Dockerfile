@@ -23,6 +23,8 @@ WORKDIR /opt/eosio/nodeos
 WORKDIR /opt/eosio/nodeos/data
 WORKDIR /opt/eosio/nodeos/config
 
+COPY ./nodeos/config/config.ini /opt/eosio/nodeos/config
+
 ENV EOSIO_ROOT=/opt/eosio
 
 VOLUME /opt/eosio/nodeos
@@ -34,6 +36,9 @@ WORKDIR /opt/eosio/wallet
 WORKDIR /opt/eosio/wallet/data
 WORKDIR /opt/eosio/wallet/config
 WORKDIR /opt/eosio/wallet/keys
+WORKDIR /root/eosio-wallet
+
+COPY ./wallet/config/config.ini /opt/eosio/wallet/config
 
 VOLUME /opt/eosio/wallet
 

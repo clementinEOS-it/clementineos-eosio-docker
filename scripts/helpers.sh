@@ -19,8 +19,9 @@ function unlock_wallet () {
 # Creates the default wallet and stores the password on a file
 function create_wallet () {
   echo "Creating default wallet ..."
-  WALLET_PASSWORD=$($cleos wallet create --to-console | awk 'FNR > 3 { print $1 }' | tr -d '"')
-  echo $WALLET_PASSWORD > $WALLET_KEYS/wallet_password.txt
+  $cleos wallet create --to-console | awk 'FNR > 3 { print $1 }' | tr -d '"' > $WALLET_KEYS/wallet_password.txt
+  # WALLET_PASSWORD=$($cleos wallet create --to-console | awk 'FNR > 3 { print $1 }' | tr -d '"')
+  # echo $WALLET_PASSWORD > $WALLET_KEYS/wallet_password.txt
   sleep .5
 }
 

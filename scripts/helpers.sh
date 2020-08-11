@@ -11,7 +11,7 @@ cleos="cleos -u http://ec2-3-8-20-64.eu-west-2.compute.amazonaws.com:8888 --wall
 # Unlocks the default wallet and waits .5 seconds
 function unlock_wallet () {
   echo "Unlocking defaault wallet..."
-  $cleos wallet unlock --password $(cat $CONFIG_DIR/keys/wallet_password.txt)
+  $cleos wallet unlock --password $(cat $WALLET_KEYS/wallet_password.txt)
   sleep .5
 }
 
@@ -19,7 +19,7 @@ function unlock_wallet () {
 function create_wallet () {
   echo "Creating default wallet ..."
   WALLET_PASSWORD=$($cleos wallet create --to-console | awk 'FNR > 3 { print $1 }' | tr -d '"')
-  echo $WALLET_PASSWORD > "$CONFIG_DIR"/keys/wallet_password.txt
+  echo $WALLET_PASSWORD > "$WALLET_KEYS"/wallet_password.txt
   sleep .5
 }
 

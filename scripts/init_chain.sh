@@ -66,7 +66,7 @@ function deploy_system_contracts () {
 
 # Make sure nodeos is running in the docker container
 sleep 5s
-until curl localhost:8888/v1/chain/get_info
+until curl http://ec2-3-8-20-64.eu-west-2.compute.amazonaws.com:8888/v1/chain/get_info
 do
   sleep 1s
 done

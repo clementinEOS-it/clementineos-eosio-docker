@@ -5,7 +5,7 @@ services:
   nodeos:
     container_name: clementineos_nodeos
     image: gzileni/clementineos-eosio:latest
-    command: /opt/eosio/nodeos/scripts/nodeosd.sh
+    command: nodeos -e --data-dir=/opt/eosio/nodeos/data --config-dir=/opt/eosio/nodeos/config --disable-replay-opts --contracts-console --hard-replay-blockchain --delete-all-blocks
     hostname: nodeos
     ports:
       - 8888:8888

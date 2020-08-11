@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+
+  nodeos:
+    container_name: clementineos_nodeos
+    image: gzileni/clementineos-eosio:latest
+    command: /opt/eosio/nodeos/scripts/nodeosd.sh
+    hostname: nodeos
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+    volumes:
+      - ./nodeos:/opt/eosio/nodeos

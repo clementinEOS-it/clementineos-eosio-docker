@@ -3,6 +3,8 @@
 # Throws error when using unset variable
 set -ux
 
+WALLET_KEYS = '/opt/eosio/wallet/keys'
+
 # Alias cleos with endpoint param to avoid repetition
 cleos="cleos -u http://ec2-3-8-20-64.eu-west-2.compute.amazonaws.com:8888 --wallet-url http://ec2-3-8-20-64.eu-west-2.compute.amazonaws.com:8901"
 # cleos="cleos -u http://localhost:8888 --wallet-url http://localhost:8901"

@@ -17,7 +17,7 @@ services:
 
     wallet:
         container_name: clementineos_wallet
-        image: gzileni/clementineos-eosio.cdt:latest
+        image: gzileni/clementineos-eosio:latest
         command: keosd --wallet-dir=/opt/eosio/wallet/data --config-dir=/opt/eosio/wallet/config
         hostname: keosd
         links:

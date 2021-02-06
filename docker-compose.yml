@@ -3,7 +3,7 @@ version: "3.5"
 services:
 
     nodeos:
-        container_name: clementineos_nodeos
+        container_name: nodeos
         image: gzileni/clementineos-eosio:latest
         command: nodeos -e --data-dir /opt/eosio/nodeos/data --config-dir /opt/eosio/nodeos/config --disable-replay-opts --contracts-console --hard-replay-blockchain --delete-all-blocks 
         hostname: nodeos
@@ -16,7 +16,7 @@ services:
         - ./nodeos:/opt/eosio/nodeos
 
     wallet:
-        container_name: clementineos_wallet
+        container_name: wallet
         image: gzileni/clementineos-eosio:latest
         command: keosd --wallet-dir=/opt/eosio/wallet/data --config-dir=/opt/eosio/wallet/config 
         hostname: keosd

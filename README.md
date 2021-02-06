@@ -1,1 +1,1 @@
-# clementineos-eosio-docker
+# eosio-docker
